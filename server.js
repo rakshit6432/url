@@ -10,7 +10,7 @@ app.use(express.static("public"));
 
 // connect mongoose with database
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://<url122 >:<url122>@cluster0.kraip.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri = "mongodb+srv://url122:url122@cluster0.kraip.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
