@@ -9,20 +9,13 @@ const app = express();
 app.use(express.static("public"));
 
 // connect mongoose with database
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/url", {
-  useNewUrlParser: true, useUnifiedTopology: true
-});
-
-const db = mongoose.connection;
-
-// error connection
-db.on("error", () => {
-  console.log("mongodb error!");
-});
-
-// successful connection
-db.once("open", () => {
-  console.log("mongodb connected!");
+const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv://<url122 >:<url122>@cluster0.kraip.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
 });
 
 app.set("view engine", "ejs");
