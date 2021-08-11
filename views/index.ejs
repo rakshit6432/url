@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/f2a855287c.js" crossorigin="anonymous"></script>
+    <title>SHORTLIFY</title>
+</head>
+<body>
+  <section>
+    <form action="/shortUrls" method="POST">
+        <div class="main-wrapper">
+          <div id="card-wrapper">
+            <div class="front-card">
+              <div class="title">SHORTLIFY</div>
+            <div class="input-wrapper">
+              <label for="fullurl">[URL]</label>
+              <input required type="url" id="fullUrl" name="fullUrl" placeholder="📌PASTE HERE">
+              <button type="submit" class="shorten-btn">🔥SHORTEN URL</button>
+            </div>
+            </div>
+            <div class="back-card">
+        </form>
+            </div>
+          </div>
+        </div>
+
+         <!-- table -->
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Full URL</th>
+                <th>Short Url</th>
+                <th>Clicks</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+                <!--ejs used to display the data from mongoose-->
+              <% shortUrls.forEach(shortUrl => { %>
+                <tr>
+                  <td><a class="link6432" href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                  <td><a class="link6432" href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                  <td><%= shortUrl.clicks %></td>
+                  <td><a  class="link6432" href="/remove/<%= shortUrl._id %>"><i class="fas fa-trash"</i></a></td>
+                </tr>
+              <% }) %>
+              </tbody>
+          </table>
+        </div>
+      </section>
+      <script>
+      // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+        $(window).on("load resize ", function() {
+          var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+          $('.tbl-header').css({'padding-right':scrollWidth});
+        }).resize();
+        </script>
+
+ <!--clear table-->
+
+</div>
+</body>
+</html>

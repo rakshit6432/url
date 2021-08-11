@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,300,700");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #090282;
+  background: linear-gradient(
+    90deg,
+    rgba(9, 2, 130, 1) 0%,
+    rgba(19, 19, 168, 1) 27%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.main-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#card-wrapper {
+  position: relative;
+  background-color: white;
+  box-shadow: -5px 5px 12px black;
+  transform-style: preserve-3d;
+  transition: all 1.4s ease;
+}
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #282828;
+}
+.input-wrapper {
+  padding: 20px;
+  position: relative;
+}
+#fullUrl {
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translateX(-50%);
+  padding: 0 10px;
+  letter-spacing: 2px;
+}
+#fullUrl:focus {
+  background-color: #282828;
+  outline: none;
+  border: 2px solid #282828;
+  color: white;
+  letter-spacing: 1px;
+}
+label {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  background-color: #282828;
+  color: white;
+  padding: 2px 3px;
+  position: absolute;
+  left: 38px;
+}
+.shorten-btn {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  padding: 8px;
+  color: white;
+  background: #090282;
+  background: linear-gradient(
+    90deg,
+    rgba(9, 2, 130, 1) 0%,
+    rgba(19, 19, 168, 1) 27%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: none;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  box-shadow: -4px 4px 4px grey;
+  transition: box-shadow 0.2s ease, top 0.2s ease;
+}
+.shorten-btn:hover {
+  cursor: pointer;
+}
+
+.front-card {
+  backface-visibility: hidden;
+  width: 400px;
+  height: 250px;
+  position: absolute;
+}
+.back-card {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  width: 400px;
+  height: 250px;
+  position: absolue;
+  background-color: white;
+}
+/*----table style-------*/
+h1 {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+.tbl-header {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+.tbl-content {
+  height: 300px;
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+th {
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  
+}
+td {
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  position: relative;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  word-wrap: break-word;
+}
+
+
+section {
+  margin: 50px;
+  padding: 20px;
+}
+
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.link6432 {
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.clear-btn {
+  position: bottom;
+  left: 150%;
+  top: 100px;
+  transform: translateX(-50%);
+  padding: 8px;
+  margin-left: 50%;
+  margin-bottom: 200px;
+  color: white;
+  background: #090282;
+  background: linear-gradient(
+    90deg,
+    rgba(9, 2, 130, 1) 0%,
+    rgba(19, 19, 168, 1) 27%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: none;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  box-shadow: -4px 4px 4px grey;
+  transition: box-shadow 0.2s ease, top 0.2s ease;
+}
+.clear-btn:hover {
+  cursor: pointer;
+}
