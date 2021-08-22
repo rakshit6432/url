@@ -1,10 +1,11 @@
+require('newrelic');
 const { Router } = require("express");
 const express = require("express");
 const mongoose = require("mongoose");
 const shortUrl = require("./models/shortUrl");
 const ShortUrl = require("./models/shortUrl");
 const app = express();
-require('newrelic');
+
 
 // serve static files
 app.use(express.static("public"));
