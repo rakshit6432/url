@@ -11,7 +11,7 @@ const app = express();
 app.use(express.static("public"));
 
 // connect mongoose with database
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://<username>:<password>@cluster0.kraip.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://url122:9901188169@cluster0.kraip.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
   useNewUrlParser: true, useUnifiedTopology: true
 });
 
